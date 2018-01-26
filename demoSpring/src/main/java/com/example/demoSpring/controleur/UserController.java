@@ -31,7 +31,7 @@ public class UserController {
 		return userService.getUser(username);
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
+	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public void addEtudiant(@RequestBody UserDTO u) {
 		this.userService.addUser(u);
 	}
