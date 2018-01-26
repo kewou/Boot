@@ -57,14 +57,14 @@ public class GestionException {
 		// added
 		// to the model) but see "Extending ExceptionHandlerExceptionResolver"
 		// below.
-		return "sql Exception" + " \nNomE Exception : " + e;
+		return "sql Exception: " + e;
 	}
 
 	// Specify name of a specific view that will be used to display the error:
 	@ResponseStatus(HttpStatus.CONFLICT)
 	@ExceptionHandler(DataAccessException.class)
 	public String databaseAccessException(DataAccessException e) {
-		return "dataAccess Exception" + " \nNomE Exception : " + e;
+		return "dataAccess Exception : " + e;
 	}
 
 }

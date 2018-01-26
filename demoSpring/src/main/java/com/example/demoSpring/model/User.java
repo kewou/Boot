@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 @Entity
-@Table(name = "User")
+@Table(name = "Users")
 @Data
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class User implements Serializable {
@@ -39,6 +39,7 @@ public class User implements Serializable {
 	public UserDTO convertTODto() {
 		UserDTO user = new UserDTO();
 		user.setNomUtilisateur(this.username);
+		user.setPasswordUser(this.pass);
 		return user;
 	}
 
