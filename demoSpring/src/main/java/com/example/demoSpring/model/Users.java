@@ -18,7 +18,7 @@ import lombok.Data;
 @Table(name = "Users")
 @Data
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class User implements Serializable {
+public class Users implements Serializable {
 
 	/**
 	 * 

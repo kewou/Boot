@@ -3,7 +3,7 @@
  */
 package com.example.demoSpring.dto;
 
-import com.example.demoSpring.model.User;
+import com.example.demoSpring.model.Users;
 
 import lombok.Data;
 
@@ -18,8 +18,8 @@ public class UserDTO {
 
 	private String passwordUser;
 
-	public User convertToEntity() {
-		User user = new User();
+	public Users convertToEntity() {
+		Users user = new Users();
 		user.setUsername(this.nomUtilisateur);
 		user.setPass(this.passwordUser);
 		return user;
